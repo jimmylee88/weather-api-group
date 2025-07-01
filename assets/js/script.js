@@ -1,4 +1,4 @@
-const API_KEY = "f23ee9deb4e1a7450f3157c44ed020e1";
+const API_KEY = "68922596a744260fd400c2a5d4717aed";
 
 // First, get the latitude and longitude for the city
 const geoUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${API_KEY}`;
