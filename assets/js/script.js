@@ -1,4 +1,3 @@
-
 document.getElementById("getWeather").addEventListener("click", async function() {
     const city = document.getElementById("city").value;
       console.log(city); // featch the city name from the input field
