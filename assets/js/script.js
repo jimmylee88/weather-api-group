@@ -3,7 +3,7 @@ document.getElementById("getWeather").addEventListener("click", async function()
       console.log(city); // featch the city name from the input field
     const resultDiv = document.getElementById("weatherResult");
       console.log(resultDiv); // featch the result div
-
+  
     resultDiv.innerHTML = ""; // Clear previous results
 
     if (!city) {
