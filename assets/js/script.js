@@ -9,34 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!city) {
             resultDiv.innerHTML = "<p>Please enter a city name.</p>";
             console.log("No city entered");
-
-document.getElementById("getWeather").addEventListener("click", async function() {
-    const city = document.getElementById("city").value;
-      console.log(city); // featch the city name from the input field
-    const resultDiv = document.getElementById("weatherResult");
-      console.log(resultDiv); // featch the result div
-  
-    resultDiv.innerHTML = ""; // Clear previous results
-
-    if (!city) {
-    resultDiv.innerHTML = "<p>Please enter a city name.</p>";
-    console.log("No city entered");
-    return;
-  }
-
-  const API_KEY = "f23ee9deb4e1a7450f3157c44ed020e1";
-
-    try {
-        // First, get the latitude and longitude for the city
-        const geoUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${API_KEY}`;
-        const geoResponse = await fetch(geoUrl);
-        const geoData = await geoResponse.json();
-        console.log(geoData); //  geoData to see the response
-
-        if (geoData.length === 0) {
-            resultDiv.innerHTML = "<p>City not found.</p>";
-            return;
-        }
+            
         const API_KEY = "f23ee9deb4e1a7450f3157c44ed020e1";
 
         try {
