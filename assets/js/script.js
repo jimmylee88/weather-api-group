@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function () {
         //console.log(city); // featch the city name from the input field
         const resultDiv = document.getElementById("weatherResult");
         //console.log(resultDiv); // featch the result div
-
         resultDiv.innerHTML = ""; // Clear previous results
 
         if (!city) {
@@ -12,7 +11,6 @@ document.addEventListener("DOMContentLoaded", function () {
             console.log("No city entered");
             return;
         }
-
         const API_KEY = "f23ee9deb4e1a7450f3157c44ed020e1";
 
         try {
@@ -69,13 +67,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 `;
             }
             forecastHTML += "</div>";
-
             resultDiv.innerHTML = weatherHTML + forecastHTML;
-
         } catch (error) {
             console.error("Error fetching weather data:", error);
             resultDiv.innerHTML = "<p>Failed to fetch weather data. Please try again later.</p>";
         }
-
     });
 });
