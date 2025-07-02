@@ -26,12 +26,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 resultDiv.innerHTML = "<p>City not found.</p>";
                 return;
             }
-
             const lat = geoData[0].lat;
             //console.log(lat); //  latitude
             const lon = geoData[0].lon;
             //console.log(lon); //  longitude
-
             // Now, get the weather data using the latitude and longitude
             //console.log("Fetching weather data for coordinates:", lat, lon);
             const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
@@ -51,7 +49,6 @@ document.addEventListener("DOMContentLoaded", function () {
             const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
             const forecastResponse = await fetch(forecastUrl);
             const forecastData = await forecastResponse.json();
-
             const dailyForecast = {};
             forecastData.list.forEach(entry => {
                 const date = entry.dt_txt.split(" ")[0];
@@ -59,7 +56,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     dailyForecast[date] = entry;
                 }
             });
-
             let forecastHTML = `<h2>5-Day Forecast</h2><div style="display:flex;gap:16px;overflow-x:auto;padding:10px;">`;
             for (const date in dailyForecast) {
                 const day = dailyForecast[date];
