@@ -49,3 +49,14 @@ button:hover {
 .weather-result p {
     margin: 10px 0;
 }
+
+/* Full image background */
+
+.bg {
+  background-image: url('../images/clear-sky-day.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+}
