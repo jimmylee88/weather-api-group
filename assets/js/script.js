@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
             resultDiv.innerHTML = "<p>Please enter a city name.</p>";
             console.log("No city entered");
         }
-      
+
         const API_KEY = "f23ee9deb4e1a7450f3157c44ed020e1";
 
         try {
