@@ -9,7 +9,8 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!city) {
             resultDiv.innerHTML = "<p>Please enter a city name.</p>";
             console.log("No city entered");
-            
+        }
+      
         const API_KEY = "f23ee9deb4e1a7450f3157c44ed020e1";
 
         try {
@@ -34,14 +35,14 @@ document.addEventListener("DOMContentLoaded", function () {
             const weatherResponse = await fetch(weatherUrl);
             const weatherData = await weatherResponse.json();
             let weatherHTML = `
-                <h2>Today's Weather in ${weatherData.name}</h2>
-                <p><strong>${weatherData.weather[0].main}</strong> - ${weatherData.weather[0].description}</p>
-                <p>🌡️ Temperature: ${weatherData.main.temp} °C</p>
-                <p>💧 Humidity: ${weatherData.main.humidity}%</p>
-                <p>🌬️ Wind: ${weatherData.wind.speed} m/s</p>
-                <img src="https://openweathermap.org/img/wn/${weatherData.weather[0].icon}.png" alt="${weatherData.weather[0].description}">
-                <hr>
-            `;
+                            <h2>Today's Weather in ${weatherData.name}</h2>
+                            <p><strong>${weatherData.weather[0].main}</strong> - ${weatherData.weather[0].description}</p>
+                            <p>🌡️ Temperature: ${weatherData.main.temp} °C</p>
+                            <p>💧 Humidity: ${weatherData.main.humidity}%</p>
+                            <p>🌬️ Wind: ${weatherData.wind.speed} m/s</p>
+                            <img src="https://openweathermap.org/img/wn/${weatherData.weather[0].icon}.png" alt="${weatherData.weather[0].description}">
+                            <hr>
+                            `;
             // 3. Get 5-day forecast
             const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
             const forecastResponse = await fetch(forecastUrl);
@@ -58,18 +59,18 @@ document.addEventListener("DOMContentLoaded", function () {
                 const day = dailyForecast[date];
                 const weekday = new Date(day.dt_txt).toLocaleDateString(undefined, { weekday: "short" });
                 forecastHTML += `
-                    <div style="text-align:center;min-width:100px;">
-                        <strong>${weekday}</strong><br>
-                        <img src="https://openweathermap.org/img/wn/${day.weather[0].icon}.png" alt="${day.weather[0].description}" title="${day.weather[0].description}">
-                        <div>${day.main.temp_min.toFixed(0)}° / ${day.main.temp_max.toFixed(0)}°</div>
-                    </div>
-                `;
+                                <div style="text-align:center;min-width:100px;">
+                                <strong>${weekday}</strong><br>
+                                <img src="https://openweathermap.org/img/wn/${day.weather[0].icon}.png" alt="${day.weather[0].description}" title="${day.weather[0].description}">
+                                <div>${day.main.temp_min.toFixed(0)}° / ${day.main.temp_max.toFixed(0)}°</div>
+                                </div>
+                        `;
             }
             forecastHTML += "</div>";
             resultDiv.innerHTML = weatherHTML + forecastHTML;
         } catch (error) {
-            console.error("Error fetching weather data:", error);
-            resultDiv.innerHTML = "<p>Failed to fetch weather data. Please try again later.</p>";
+            console.error("Error:", error);
+            resultDiv.innerHTML = "<p>Failed to load weather data. Please try again later.</p>";
         }
     });
 });
