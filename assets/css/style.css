@@ -17,6 +17,12 @@ body {
     text-align: center;
     width: 600px;
 }
+
+.logo {
+    transform: rotate(-8deg);
+    margin-bottom: 16px;
+}
+
 .input-section {
     margin-bottom: 20px;
 }
