@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             <p>🌡️ Temperature: ${weatherData.main.temp} °C</p>
                             <p>💧 Humidity: ${weatherData.main.humidity}%</p>
                             <p>🌬️ Wind: ${weatherData.wind.speed} m/s</p>
-                            <img src="https://openweathermap.org/img/wn/${weatherData.weather[0].icon}.png" alt="${weatherData.weather[0].description}">
+                            <img src="https://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png" alt="${weatherData.weather[0].description}">
                             <hr>
                             `;
             // 3. Get 5-day forecast
