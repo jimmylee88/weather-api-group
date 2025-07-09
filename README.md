@@ -2,9 +2,9 @@
 Group project using data from the OpenWeather API
 
 ## Team: Anarchist Society
-* [Trevor Budd] (https://github.com/TrevB123/)
-* [Jigna Kalani] (https://github.com/JignabahenKalani)
-* [Jimmy Lee] (https://github.com/jimmylee88)
+* [Trevor Budd](https://github.com/TrevB123/)
+* [Jigna Kalani](https://github.com/JignabahenKalani)
+* [Jimmy Lee](https://github.com/jimmylee88)
 
 ## Demo link
 https://jimmylee88.github.io/weather-api-group/
