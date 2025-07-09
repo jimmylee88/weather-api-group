@@ -2,9 +2,9 @@
 Group project using data from the OpenWeather API
 
 ## Team: Anarchist Society
-* Trevor Budd
-* Jigna Kalani
-* Jimmy Lee
+* [Trevor Budd] (https://github.com/TrevB123/)
+* [Jigna Kalani] (https://github.com/JignabahenKalani)
+* [Jimmy Lee] (https://github.com/jimmylee88)
 
 ## Demo link
 https://jimmylee88.github.io/weather-api-group/
@@ -41,3 +41,9 @@ We ran out of time to fully implement these ideas, and had to present our demo a
     * current weather label & description
     * temperature, humidity, and windspeed.
     * 5-day forecast data displayed underneath with icons.
+
+## Reflections
+It was a really good learning exercise on collaboration, and working on a project as a team using Github.
+Good communication and keeping in sync with each other was really important. I think that with better planning, we could have worked on the design and wireframing together more at the beginning, but our priority was just to get the basic weather data pulled in with the API and figuring out the Javascript side of things.
+
+Towards the end, on the last day we saw that Jigna had been working on some really impressive features on her own branch, but we didn't have time to polish them and merge them into the main branch to demo.
